@@ -55,3 +55,7 @@ function handlePhotoClick(event) {
 
 photo.addEventListener('click', handlePhotoClick);
 photo.addEventListener('keyup', handlePhotoClick);
+
+function suma(a, b) {
+  return a + b;
+}

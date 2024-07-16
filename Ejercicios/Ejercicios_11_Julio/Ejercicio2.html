@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario de Suma</h1>
+    <form id="frm2">
+        <label for="firstNumber">Ingrese el primer numero</label>
+        <input type="text" name="firstNumber" id="firstNumber"><br><br>
+
+        <label for="secondNumber">Ingrese el segundo numero</label>
+        <input type="text" name="secondNumber" id="secondNumber"><br><br>
+
+        <button type="button" class="processForm">Procesar formulario</button>
+    </form>
+    <h2>Resultado</h2>
+    <p id="resultado"></p>
+    <script>
+        const processButton = document.querySelector('.processForm');
+
+processButton.addEventListener('click', myFunction);
+
+function myFunction() {
+  const fNumberInput = document.getElementById('firstNumber').value;
+  const sNumberInput = document.getElementById('secondNumber').value;
+
+  const fNumber = Number(fNumberInput);
+  const sNumber = Number(sNumberInput);
+
+  if (!isNaN(fNumber) && !isNaN(sNumber)) {
+            console.log(
+      `La suma de ${fNumber} y de ${sNumber} es ${fNumber + sNumber}`,
+    );
+        document.getElementById('resultado').innerHTML =`La suma de ${fNumber} y de ${sNumber} es ${fNumber + sNumber}`;
+          } else {
+            console.log('Los valores no son números por favor ingrese valores numericos');
+            document.getElementById('resultado').innerHTML =`Los valores no son números por favor ingrese valores numericos`;
+  }
+}
+            </script>
+</body>
+</html>

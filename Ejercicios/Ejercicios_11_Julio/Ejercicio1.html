@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="frm1">
+        Nombre Completo: <input type="text" id="usuario" name="usuario"><br>
+        <button type="button" class="procesar">Procesar formulario</button>
+    </form>
+      
+      <script>
+      const procesarButton = document.querySelector('.procesar');
+      procesarButton.addEventListener(`click`, myFunction);
+
+      function myFunction() {
+        const nombreCompleto = document.getElementById('usuario').value;
+        alert(`Ahora estas en la matrix ${nombreCompleto}`);
+        console.log(`Ahora estas en la matrix ${nombreCompleto}`);
+      }
+      </script>
+</body>
+</html>
